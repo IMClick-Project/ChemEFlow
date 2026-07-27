@@ -281,9 +281,7 @@ The existing Python API also creates a practical foundation for extending ChemEF
 
 ## Team
 
-**IMClick-Project**
-
-**Mariola Camacho Lie** — Project creator, chemical engineering concept development, application design, testing, documentation, and integration.
+**Mariola Camacho Lie (IMClick-Project)** — Project creator, chemical engineering concept development, application design, testing, documentation, and integration.
 
 ## Demo Video
 
@@ -307,4 +305,14 @@ The bootcamp was especially valuable for exploring tools and development approac
 
 ## License
 
-No open-source license has been selected yet. Until a license is added, all rights remain with the project author.
+The ChemEFlow source code is licensed under the
+[Apache License 2.0](LICENSE).
+
+Copyright 2026 Mariola Camacho Lie.
+
+The ChemEFlow name, logo, and visual identity are not granted under this
+license. Modified or derivative versions may not be presented as official
+ChemEFlow releases without prior written permission.
+
+Academic and scientific users are encouraged to cite ChemEFlow and its
+associated publications when available.
