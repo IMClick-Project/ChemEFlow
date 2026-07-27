@@ -1,335 +1,310 @@
 # ChemEFlow
 
-**Visual, glass-box material-balance modeling for chemical engineering education.**
+[Versión en español](README.es.md)
 
-ChemEFlow is a React/Vite application that connects four representations of a chemical-engineering model:
+**ChemEFlow** is a visual educational tool for building flowsheets, defining equations, analyzing model readiness, solving small chemical engineering models, and reviewing structured results.
 
-1. **Components** — define chemical components and molecular weights.
-2. **Flowsheet** — build a process with sources, sinks, unit operations, and configurable streams.
-3. **Equations** — declare variables, construct linear systems and target-variable functions, inspect dependencies, and diagnose model solvability.
-4. **Results** — review stream tables and export the solved formulation to CSV, Python, or MATLAB.
+## Live Demo
 
-Instead of hiding the mathematics inside a black box, ChemEFlow makes variables, equations, dependencies, and the resolution sequence visible.
+[Open ChemEFlow online](https://imclick-project.github.io/ChemEFlow/)
 
-> **Project status:** hackathon MVP / educational prototype.
+## Problem
 
----
+Chemical engineering students often use separate tools for flowsheets, equations, numerical solution, programming, and result analysis. This fragmentation can make it difficult to understand:
 
-## The challenge
+- where variables come from;
+- how streams, equations, and results are connected;
+- whether a model is complete and solvable;
+- why a system cannot be solved;
+- how the final result was obtained;
+- how a mathematical model can be translated into executable code.
 
-Students often learn material balances in disconnected environments: hand calculations, programming notebooks, and process simulators. Moving between these representations can be difficult, and conventional simulators may allow users to obtain answers without clearly seeing the equations, assumptions, dependencies, or numerical steps involved.
+Programming can also become an additional barrier. Students may understand the engineering equations but still struggle to organize variables, construct numerical systems, manage dependencies, and implement the model correctly in Python or MATLAB.
 
-ChemEFlow addresses this gap by providing a visual workflow that helps users move from a flowsheet to explicit equations, diagnose whether the model is resolvable, solve it, and inspect or reuse the generated code.
+## Solution
 
----
+ChemEFlow addresses these challenges by integrating the visual and mathematical modeling workflow in a single environment. It also allows solved models to be exported as reusable Python and MATLAB code, helping connect equation-based modeling with programming.
 
-## Main features
+The application already includes an optional Python API for model analysis and numerical solution. This backend also provides a foundation for future integration with scientific Python libraries for thermodynamic properties, nonlinear equation solving, data analysis, and graphical visualization.
 
-### Components
+ChemEFlow organizes the workflow into four connected tabs:
 
-- Add and edit components.
-- Store molecular weights for mass–molar conversion.
-- Select a mass or molar calculation basis.
+- **Components:** define the chemical components used in the model.
+- **Flowsheet:** create sources, sinks, unit operations, streams, and process connections.
+- **Equations:** declare variables, build linear systems, define target-variable functions, and analyze dependencies.
+- **Results:** review solved and unresolved variables, mass and molar tables, basis conversions, and exports.
 
-### Flowsheet
+## Main Features
 
-- Drag and connect sources, sinks, and unit operations.
-- Configure stream names, total flow, composition, and component flows.
-- Move each connected stream port independently around a unit operation.
-- Save and restore stream specifications and port locations.
+- Visual flowsheet construction.
+- Component, stream, and variable configuration.
+- Linear-system analysis and solution.
+- Target-variable functions.
+- Dependency and cycle detection.
+- Separate **Analyze** and **Solve** actions.
+- Optional Python backend with JavaScript fallback.
+- Save and load complete projects.
+- Export results to CSV.
+- Export runnable Python code.
+- Export runnable MATLAB code.
 
-### Equations
+## Typical Workflow
 
-- Declare user-defined variables.
-- Create linear systems of arbitrary size.
-- Build target-variable functions with visual expression blocks.
-- Use constants, variables, operators, and grouped expressions.
-- Track dependencies between blocks.
-- Detect incomplete expressions and circular dependencies.
-- Propagate stream relationships.
-- Validate fractions, flows, and consistency.
+```text
+Components
+    ↓
+Flowsheet
+    ↓
+Variable configuration
+    ↓
+Equation blocks
+    ↓
+Analyze
+    ↓
+Solve
+    ↓
+Results and export
+```
 
-`Analyze` and `Solve` have different purposes:
+## Worked Example
 
-- **Analyze** diagnoses a linear system without changing variable values.
-- **Solve** validates the complete model, resolves ready linear systems, evaluates target-variable functions in dependency order, propagates stream relations, and repeats until no additional values can be obtained.
+A complete worked example will be included in this repository with:
 
-### Results
+- step-by-step instructions;
+- screenshots of the main workflow;
+- the saved ChemEFlow project;
+- generated CSV results;
+- exported Python code;
+- exported MATLAB code.
 
-- Display user-defined variables with value, unit, status, and origin.
-- Show mass composition, mass flow, molar composition, and molar flow as stream tables.
-- Use components as rows, streams as naturally sorted columns, and a final `Total` row.
-- Distinguish `Known`, `Calculated`, and `Solved` values.
-- Mark secondary-basis tables as unavailable when molecular weights are incomplete.
+The example can be executed directly from the public GitHub Pages version using the JavaScript solver fallback. The same workflow can also be run locally with the optional Python backend for Python-assisted analysis and solution.
 
-### Project and code export
+In addition to this complete example, the repository is intended to grow into a library of solved chemical engineering problems that users can reproduce, modify, and use as learning references.
 
-- Save the complete editable project as a `.chemeflow.json` file.
-- Open a saved project and continue editing it.
-- Export results as CSV.
-- Export readable Python code using NumPy and pandas.
-- Export readable MATLAB code using matrices and `table` objects.
-- Represent linear systems explicitly as `A x = b`.
-- Export target-variable functions as normal functions with detected parameters.
+Links:
 
----
+- [Worked example](docs/worked-example.md)
+- [Generated files](examples/worked-example/)
+- [Solved-problem library](examples/)
 
-## Technology stack
+This documentation allows users and reviewers to reproduce the complete workflow from process construction to numerical results and code export.
 
-- **Frontend:** React 19, Vite, React Flow / XYFlow
-- **Optional numerical backend:** Python, FastAPI, NumPy
-- **Browser fallback:** JavaScript linear-system analysis when the backend is unavailable
-- **Generated code:** Python with NumPy and pandas; MATLAB
+## Architecture
 
----
+```text
+┌──────────────────────────────────────────────────────────┐
+│                    ChemEFlow Frontend                     │
+│                 React + Vite + React Flow                 │
+│                                                          │
+│ Components → Flowsheet → Equations → Results             │
+└───────────────────────────┬──────────────────────────────┘
+                            │ HTTP API when available
+                            ▼
+┌──────────────────────────────────────────────────────────┐
+│                 Optional Python Backend                   │
+│                    FastAPI + NumPy                        │
+│                                                          │
+│ Health check · Analysis · Linear-system solution         │
+└───────────────────────────┬──────────────────────────────┘
+                            │
+                            ├── Current: NumPy calculations
+                            │
+                            └── Future: scientific Python libraries
+                                        for properties, nonlinear
+                                        equations, data analysis,
+                                        and visualization
 
-## Local installation
+JavaScript fallback is used when the Python backend is unavailable.
+```
+
+## Technology Stack
+
+### Frontend
+
+- React
+- Vite
+- React Flow / XYFlow
+- JavaScript
+- HTML
+- CSS
+
+### Backend
+
+- Python
+- FastAPI
+- Uvicorn
+- NumPy
+
+### Deployment and Development
+
+- GitHub
+- GitHub Pages
+- GitHub Actions
+- Anaconda
+- Visual Studio Code
+- Kiro
+
+## Online and Local Execution
+
+The public version is deployed through GitHub Pages and runs directly in the browser.
+
+Because GitHub Pages only hosts static files, the online version uses the JavaScript solver fallback.
+
+The local version can optionally connect to the Python backend for analysis and numerical solution.
+
+## Run Locally
 
 ### Requirements
 
-- Node.js 20 or newer
+- Node.js 20 or later
 - npm
-- Python 3.11 or newer for the optional local numerical backend
+- Optional: Python 3.11
+- Optional: Anaconda
 
-### 1. Clone the repository
+### Clone the Repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd chemeflow
+git clone https://github.com/IMClick-Project/ChemEFlow.git
+cd ChemEFlow
 ```
 
-### 2. Start the Python backend
-
-#### Windows with a virtual environment
-
-```powershell
-cd backend
-python -m venv .venv
-.venv\Scripts\activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python -m uvicorn app.main:app --reload
-```
-
-The API runs at `http://127.0.0.1:8000`.
-
-Useful endpoints:
-
-- Health check: `http://127.0.0.1:8000/health`
-- Interactive API documentation: `http://127.0.0.1:8000/docs`
-
-### 3. Configure the frontend
-
-Copy `.env.example` to `.env` in the project root:
-
-```env
-VITE_API_URL=http://127.0.0.1:8000
-```
-
-### 4. Start the frontend
-
-Open a second terminal in the project root:
+### Run the Frontend
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL printed by Vite, normally `http://localhost:5173`.
-
-> The backend is recommended, but linear-system analysis can fall back to the browser if the local API is unavailable.
-
----
-
-## Basic workflow
-
-1. Add components and molecular weights in **Components**.
-2. Select the calculation basis.
-3. Build and connect the process in **Flowsheet**.
-4. Select each stream to enter known flow and composition data.
-5. Open **Equations**.
-6. Add Variable Declarations, Linear Systems with expression-based coefficients, and Target Variable Functions as needed.
-7. Press **Analyze** on each linear system to inspect its diagnostic status.
-8. Press the global red **Solve** button.
-9. Open **Results** after the model reaches `Model solved`.
-10. Export CSV, Python, or MATLAB, or save the project for later use.
-
-Any semantic change to the model invalidates the previous global solution. Press **Solve** again before reviewing Results.
-
----
-
-## Example: linear system
-
-For a system represented by
+Open the address shown by Vite, normally:
 
 ```text
-A = [[1.0, 1.0],
-     [0.4, 0.7]]
-
-b = [100.0, 58.0]
+http://localhost:5173
 ```
 
-ChemEFlow diagnoses the ranks of `A` and `[A|b]`. A ready system is resolved only when the global **Solve** button is pressed. The corresponding Python export follows the readable form:
-
-```python
-A_1 = np.array([
-    [1.0, 1.0],
-    [0.4, 0.7],
-], dtype=float)
-
-b_1 = np.array([100.0, 58.0], dtype=float)
-x_1 = np.linalg.solve(A_1, b_1)
-```
-
----
-
-## Model-status vocabulary
-
-### Linear System diagnostics
-
-- `Ready to solve`
-- `Underdetermined`
-- `Inconsistent`
-- `Physically invalid result`
-
-### Target Variable Function diagnostics
-
-- `Ready to solve`
-- `Depends on another block`
-- `Waiting for a variable`
-- `No block produces a variable`
-- `Incomplete expression`
-- `Circular dependency`
-
-### Global model status
-
-- `Model solved`
-- `Model partially solved`
-- `Model cannot be solved`
-
-### Variable status
-
-- `Known` — specified by the user
-- `Calculated` — obtained from direct stream relationships or basis conversion
-- `Solved` — obtained by a Linear System or Target Variable Function during global Solve
-
----
-
-## Exported Python and MATLAB files
-
-The generated files are intended to be readable and editable outside ChemEFlow.
-
-Python exports require:
+### Run the Optional Python Backend with Anaconda
 
 ```bash
-pip install numpy pandas
-```
-
-They contain:
-
-- editable inputs;
-- declared and stream variables;
-- linear systems as NumPy arrays;
-- target-variable functions with explicit parameters;
-- the resolution sequence;
-- user-defined-variable tables;
-- mass and molar flow/composition DataFrames.
-
-MATLAB exports contain equivalent matrices, functions, variables, and `table` objects.
-
----
-
-## Save and open projects
-
-Use **Save Project** to download the complete editable model. The project file includes components, basis, flowsheet nodes, streams, specifications, equations, expression blocks, dependencies, and individual stream-port positions.
-
-Use **Open Project** to restore the model. Results are intentionally invalidated after opening; press **Solve** to regenerate them from the restored configuration.
-
----
-
-## Repository structure
-
-```text
-chemeflow/
-├── src/                    # React application
-│   ├── components/         # Shared interface components
-│   ├── nodes/              # React Flow nodes
-│   ├── pages/              # Components, Equations, and Results pages
-│   ├── App.jsx             # Main application and shared state
-│   └── App.css             # Application styles
-├── backend/
-│   ├── app/                # FastAPI numerical engine
-│   ├── tests/              # Backend tests
-│   └── requirements.txt
-├── docs/                   # Architecture, demo, testing, and submission notes
-├── .env.example
-├── package.json
-└── README.md
-```
-
----
-
-## Current scope and limitations
-
-ChemEFlow currently focuses on educational material-balance modeling. It is not intended to replace a rigorous commercial process simulator.
-
-Current limitations include:
-
-- no rigorous thermodynamic-property packages;
-- no energy balances;
-- no reactor or separation-equilibrium models;
-- no dynamic simulation or process control;
-- local project files rather than cloud accounts;
-- ongoing validation is still needed for large and unusual models.
-
-These boundaries are intentional for the hackathon MVP: the priority is transparent formulation and model diagnosis.
-
----
-
-## Hackathon demo
-
-A recommended five-minute demonstration is available in [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md).
-
-Submission-ready title, description, challenge statement, and link placeholders are available in [`docs/HACKATHON_SUBMISSION.md`](docs/HACKATHON_SUBMISSION.md).
-
----
-
-## Testing
-
-Backend tests:
-
-```bash
+conda create -n chemeflow python=3.11
+conda activate chemeflow
 cd backend
-python -m pytest
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload --port 8000
 ```
 
-Frontend production build:
+If the backend entry point is `main.py` directly, use:
+
+```bash
+python -m uvicorn main:app --reload --port 8000
+```
+
+Backend health check:
+
+```text
+http://127.0.0.1:8000/health
+```
+
+API documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Production Build
 
 ```bash
 npm run build
+npm run preview
 ```
 
-A manual end-to-end checklist is available in [`docs/TEST_CHECKLIST.md`](docs/TEST_CHECKLIST.md).
+The production files are generated in:
 
----
+```text
+dist/
+```
 
-## Roadmap after the hackathon
+## Use of Kiro
 
-- Stabilize and document the MVP with classroom-scale examples.
-- Add editable glass-box templates for mixers, splitters, and component separators.
-- Conduct usability tests with chemical-engineering students.
-- Evaluate learning outcomes related to degrees of freedom, dependency analysis, and transfer from flowsheets to code.
-- Develop instructor activities and example projects.
+Kiro was used during the early development of ChemEFlow, starting from the initial project idea. It helped transform the concept into a clearer application structure, identify the main modules, and establish a more organized development path.
 
----
+Working with Kiro was particularly useful because the project required moving beyond my primary area of chemical engineering and into web development. It helped suggest interface structures, workflows, and implementation considerations that might not have been immediately evident from a chemical engineering perspective.
+
+However, effective use of Kiro still required basic knowledge of web development and the technologies used in the project. This knowledge was necessary to evaluate suggestions, guide the implementation, identify incorrect assumptions, and progressively refine the application.
+
+Kiro therefore served as a development assistant and design-support tool, while the final technical decisions, testing, corrections, and integration were guided by the project requirements and engineering objectives.
+
+## Cloud Deployment
+
+The current public prototype is deployed through GitHub Pages.
+
+AWS services were not integrated into the final architecture of this hackathon version.
+
+The application can run entirely in the browser using the JavaScript fallback, while an optional FastAPI and NumPy backend is available for local Python-assisted solving.
+
+## Why ChemEFlow Matters
+
+ChemEFlow addresses a real educational need by connecting process structure, equations, analysis, solution, programming, and results in one workflow.
+
+Its main contribution is not a new numerical algorithm or process simulator. The contribution is an integrated educational environment where users can see:
+
+- how the model is built;
+- where variables originate;
+- what each equation depends on;
+- whether the model is solvable;
+- how the result is generated;
+- how the model can be exported and reused.
+
+It also acts as a bridge between equation-based modeling and programming by generating reusable Python and MATLAB implementations from the model created visually.
+
+The existing Python API also creates a practical foundation for extending ChemEFlow with scientific Python libraries without redesigning the complete application architecture.
+
+## Current Limitations
+
+- ChemEFlow is not a replacement for a rigorous process simulator.
+- The public GitHub Pages version cannot execute the Python backend.
+- Thermodynamic-property packages are not yet integrated.
+- Basis conversion requires molecular-weight information.
+- The current prototype focuses on small educational models.
+- Advanced unit-operation models are not yet included.
+- Dynamic simulation remains future work.
+
+## Future Work
+
+- Deploy the Python backend to a cloud service.
+- Expand the unit-operation library.
+- Integrate scientific Python libraries for thermodynamic-property calculations.
+- Support a wider range of mathematical functions and expressions.
+- Expand target-variable functions with additional mathematical operations.
+- Add interactive plots for expressions, variable relationships, and calculated results.
+- Add nonlinear equation systems using Python numerical libraries.
+- Add guided tutorials and additional solved examples.
+- Improve automated testing and accessibility.
 
 ## Team
 
-Add the team members, institutional affiliation, and contact information here before submission.
+**IMClick-Project**
+
+**Mariola Camacho Lie** — Project creator, chemical engineering concept development, application design, testing, documentation, and integration.
+
+## Demo Video
+
+The final project video will present:
+
+- the problem addressed by ChemEFlow;
+- the objective of the application;
+- its main components;
+- a complete functional example;
+- the development workflow and use of Kiro.
+
+**Video:** _Add the final link here before submission._
+
+## Acknowledgments
+
+I would like to thank Código Facilito for organizing the hackathon and for providing the previous bootcamp on Kiro and AWS.
+
+The learning materials, practical sessions, community support, and mentoring helped strengthen the development process and provided useful guidance for transforming the initial idea into a functional project.
+
+The bootcamp was especially valuable for exploring tools and development approaches outside my main field of chemical engineering, while still requiring critical evaluation, technical guidance, and continuous testing during implementation.
 
 ## License
 
-Add the selected open-source license before publishing the repository. MIT is a common option for hackathon and educational software, but the project team should confirm the final choice.
-
-### Transparent dependency order
-ChemEFlow displays how equation blocks depend on one another. Target functions preserve which inputs were resolved during the global Solve, while the Variable Inventory shows the block resolution order used by the dependency-aware solver.
+No open-source license has been selected yet. Until a license is added, all rights remain with the project author.
