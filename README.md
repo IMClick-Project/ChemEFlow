@@ -306,7 +306,7 @@ The bootcamp was especially valuable for exploring tools and development approac
 ## License
 
 ChemEFlow is available under the
-[ChemEFlow Academic and Scientific Use License](LICENSE).
+[ChemEFlow Academic and Scientific Use License](LICENSE.md).
 
 The software may be used free of charge for teaching, learning,
 non-commercial academic research, and internal experimentation.
