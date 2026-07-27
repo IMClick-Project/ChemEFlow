@@ -89,8 +89,7 @@ Además de este ejemplo completo, se busca que el repositorio crezca como una bi
 
 Enlaces:
 
-- [Ejemplo resuelto](docs/worked-example.md)
-- [Archivos generados](examples/worked-example/)
+- [Ejemplo resuelto con Archivos generados](examples/worked-example/)
 - [Biblioteca de problemas resueltos](examples/)
 
 Esta documentación permitirá a los usuarios y evaluadores reproducir el flujo completo, desde la construcción del proceso hasta la obtención de resultados numéricos y la exportación de código.
@@ -246,22 +245,25 @@ Los servicios de AWS no se integraron en la arquitectura final de esta versión 
 
 La aplicación puede ejecutarse completamente en el navegador mediante el respaldo en JavaScript, mientras que el backend opcional con FastAPI y NumPy está disponible para la solución local asistida por Python.
 
-## Importancia de ChemEFlow
+## Innovación y ventaja técnica
 
-ChemEFlow responde a una necesidad educativa real al conectar la estructura del proceso, las ecuaciones, el análisis, la solución, la programación y los resultados en un solo flujo de trabajo.
+ChemEFlow ofrece una alternativa ligera y modular frente a flujos de trabajo que utilizan herramientas separadas para diagramas, ecuaciones, solución numérica, resultados y generación de código.
 
-Su principal contribución no es un nuevo algoritmo numérico ni un simulador de procesos. La contribución consiste en un entorno educativo integrado en el que los usuarios pueden observar:
+Su diseño centrado en el navegador permite ejecutar la versión pública sin instalaciones, licencias ni servidores remotos. JavaScript gestiona las funciones objetivo, dependencias, proyectos y cálculos compatibles, mientras que un backend opcional con FastAPI permite integrar futuras librerías científicas de Python.
 
-- cómo se construye el modelo;
-- de dónde provienen las variables;
-- de qué depende cada ecuación;
-- si el modelo puede resolverse;
-- cómo se genera el resultado;
-- cómo puede exportarse y reutilizarse el modelo.
+ChemEFlow también separa **Analyze** de **Solve**, lo que permite detectar datos faltantes, dependencias circulares, sistemas subdeterminados o inconsistentes y resultados inválidos antes del cálculo.
 
-También funciona como un puente entre el modelado basado en ecuaciones y la programación, al generar implementaciones reutilizables en Python y MATLAB a partir del modelo creado visualmente.
+Los modelos pueden guardarse y exportarse como archivos CSV, Python y MATLAB, por lo que pueden reutilizarse fuera de la aplicación.
 
-La API de Python existente también proporciona una base práctica para ampliar ChemEFlow con librerías científicas de Python sin tener que rediseñar toda la arquitectura de la aplicación.
+Su arquitectura modular permite agregar funciones, gráficas, operaciones unitarias, propiedades termodinámicas y solucionadores no lineales sin reconstruir todo el sistema.
+
+### Relevancia educativa
+
+ChemEFlow ayuda a plantear problemas de ingeniería química de manera visual y estructurada desde materias iniciales como balances de materia.
+
+Al conectar diagramas, variables, ecuaciones, orden de solución y resultados, prepara a los estudiantes para los simuladores comerciales y reduce el salto entre los cálculos tradicionales y la programación científica.
+
+ChemEFlow funciona así como un puente entre los fundamentos de ingeniería, la simulación de procesos y Python o MATLAB.
 
 ## Limitaciones actuales
 
