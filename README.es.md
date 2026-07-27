@@ -307,15 +307,20 @@ El bootcamp fue especialmente valioso para explorar herramientas y enfoques de d
 
 ## Licencia
 
-El código fuente de ChemEFlow se distribuye bajo la
-[Licencia Apache 2.0](LICENSE).
+ChemEFlow está disponible bajo la
+[Licencia de Uso Académico y Científico de ChemEFlow](LICENSE).
 
-Copyright 2026 Mariola Camacho Lie.
+El software puede utilizarse gratuitamente para docencia, aprendizaje,
+investigación académica no comercial y experimentación interna.
 
-El nombre, el logotipo y la identidad visual de ChemEFlow no se conceden
-bajo esta licencia. Las versiones modificadas o derivadas no podrán
-presentarse como versiones oficiales de ChemEFlow sin autorización previa
-por escrito.
+El uso académico, científico o educativo deberá reconocer y citar:
 
-Se invita a los usuarios académicos y científicos a citar ChemEFlow y sus
-publicaciones asociadas cuando estén disponibles.
+**Mariola Camacho Lie, ChemEFlow, 2026.**
+
+Se permite modificar el código para fines personales, educativos o de
+investigación interna. La redistribución pública de versiones modificadas
+o derivadas, el uso comercial, la reventa o su prestación como servicio
+de pago requieren autorización previa por escrito de Mariola Camacho Lie.
+
+El nombre, el logotipo y la identidad visual de ChemEFlow no podrán
+utilizarse para presentar versiones modificadas como versiones oficiales.
