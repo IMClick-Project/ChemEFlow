@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field, field_validator
 
 app = FastAPI(
     title="ChemEFlow Calculation API",
-    version="0.2.0",
+    version="0.1.0",
     description="Local Python calculation engine for ChemEFlow.",
 )
 
@@ -61,7 +61,7 @@ def health() -> dict[str, str]:
     return {
         "status": "ok",
         "engine": "Python",
-        "version": "0.2.0",
+        "version": "0.1.0",
     }
 
 
