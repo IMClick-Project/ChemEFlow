@@ -305,8 +305,6 @@ El bootcamp fue especialmente valioso para explorar herramientas y enfoques de d
 
 ## Licencia
 
-## Licencia
-
 ChemEFlow está disponible bajo la
 [Licencia de Uso Académico y Científico de ChemEFlow](LICENSE.md).
 
