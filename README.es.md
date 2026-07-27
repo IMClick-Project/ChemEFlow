@@ -1,6 +1,12 @@
 # ChemEFlow
 
-[English version](README.md)
+<p align="center">
+  <img src="logo_complete.png" alt="Logotipo de ChemEFlow" width="500">
+</p>
+
+<p align="center">
+  <a href="README.md">English version</a>
+</p>
 
 **ChemEFlow** es una herramienta educativa visual para construir diagramas de flujo, definir ecuaciones, analizar si un modelo está listo para resolverse, solucionar modelos pequeños de ingeniería química y revisar resultados estructurados.
 
