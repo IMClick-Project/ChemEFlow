@@ -1,0 +1,1069 @@
+{
+  "format": "chemeflow-project",
+  "version": 1,
+  "savedAt": "2026-07-28T01:11:50.226Z",
+  "app": "ChemEFlow",
+  "model": {
+    "components": [
+      {
+        "id": "component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+        "name": "A",
+        "hasMolecularWeight": true,
+        "molecularWeight": "46"
+      },
+      {
+        "id": "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693",
+        "name": "W",
+        "hasMolecularWeight": true,
+        "molecularWeight": "18"
+      },
+      {
+        "id": "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15",
+        "name": "E",
+        "hasMolecularWeight": true,
+        "molecularWeight": "74"
+      }
+    ],
+    "calculationBasis": "mass",
+    "nodes": [
+      {
+        "id": "node-4",
+        "type": "sourceNode",
+        "position": {
+          "x": 163.6316085129568,
+          "y": 48.34704444112057
+        },
+        "data": {
+          "label": "Source 2",
+          "image": null
+        },
+        "measured": {
+          "width": 28,
+          "height": 28
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "node-5",
+        "type": "operationNode",
+        "position": {
+          "x": 319.6257546242695,
+          "y": 0.6389550198158815
+        },
+        "data": {
+          "label": "R1",
+          "image": "data:image/png;base64,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"
+        },
+        "style": {
+          "width": 180,
+          "height": 120
+        },
+        "measured": {
+          "width": 180,
+          "height": 120
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "node-6",
+        "type": "operationNode",
+        "position": {
+          "x": 620.5138196402229,
+          "y": 70.71097858862524
+        },
+        "data": {
+          "label": "C1",
+          "image": "data:image/png;base64,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"
+        },
+        "style": {
+          "width": 180,
+          "height": 120
+        },
+        "measured": {
+          "width": 180,
+          "height": 463
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 180,
+        "height": 463,
+        "resizing": false
+      },
+      {
+        "id": "node-7",
+        "type": "operationNode",
+        "position": {
+          "x": 898.8695253014137,
+          "y": 427.29090645330353
+        },
+        "data": {
+          "label": "C2",
+          "image": "data:image/png;base64,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"
+        },
+        "style": {
+          "width": 180,
+          "height": 120
+        },
+        "measured": {
+          "width": 177,
+          "height": 442
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 177,
+        "height": 442,
+        "resizing": false
+      },
+      {
+        "id": "node-8",
+        "type": "sinkNode",
+        "position": {
+          "x": 850.6104617207906,
+          "y": 3.8812693971546857
+        },
+        "data": {
+          "label": "Sink 2",
+          "image": null
+        },
+        "measured": {
+          "width": 28,
+          "height": 28
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "node-9",
+        "type": "sinkNode",
+        "position": {
+          "x": 1151.9151461648803,
+          "y": 924.3563524976645
+        },
+        "data": {
+          "label": "Sink 3",
+          "image": null
+        },
+        "measured": {
+          "width": 28,
+          "height": 28
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "node-4",
+        "sourceHandle": "output",
+        "target": "node-5",
+        "targetHandle": "input-stream-1785034702136-2anjc4",
+        "id": "stream-1785034702136-2anjc4",
+        "type": "smoothstep",
+        "label": "1",
+        "data": {
+          "label": "1",
+          "compositionInput": "fraction",
+          "totalFlow": "1000",
+          "composition": {
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354": {
+              "fraction": "0.85",
+              "componentFlow": "850"
+            },
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693": {
+              "fraction": "0.15",
+              "componentFlow": "150"
+            },
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15": {
+              "fraction": "0",
+              "componentFlow": "0"
+            }
+          },
+          "calculatedFields": [
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15"
+          ],
+          "remainingValue": null,
+          "validationMessage": "",
+          "color": "#002060",
+          "sourcePortPosition": null,
+          "targetPortPosition": {
+            "side": "left",
+            "offset": 50
+          }
+        },
+        "style": {
+          "stroke": "#002060"
+        },
+        "markerEnd": {
+          "type": "arrowclosed",
+          "color": "#002060"
+        },
+        "selected": false
+      },
+      {
+        "source": "node-5",
+        "sourceHandle": "output-stream-1785034705761-khuh6h",
+        "target": "node-6",
+        "targetHandle": "input-stream-1785034705761-khuh6h",
+        "id": "stream-1785034705761-khuh6h",
+        "type": "smoothstep",
+        "label": "3",
+        "data": {
+          "label": "3",
+          "compositionInput": "fraction",
+          "totalFlow": "",
+          "composition": {
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354": {
+              "fraction": "",
+              "componentFlow": ""
+            },
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693": {
+              "fraction": "",
+              "componentFlow": ""
+            },
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15": {
+              "fraction": "",
+              "componentFlow": ""
+            }
+          },
+          "calculatedFields": [],
+          "remainingValue": null,
+          "validationMessage": "",
+          "color": "#026249",
+          "sourcePortPosition": {
+            "side": "right",
+            "offset": 50
+          },
+          "targetPortPosition": {
+            "side": "left",
+            "offset": 50
+          }
+        },
+        "style": {
+          "stroke": "#026249"
+        },
+        "markerEnd": {
+          "type": "arrowclosed",
+          "color": "#026249"
+        },
+        "selected": false
+      },
+      {
+        "source": "node-7",
+        "sourceHandle": "output-stream-1785034721586-77cnw0",
+        "target": "node-5",
+        "targetHandle": "input-stream-1785034721586-77cnw0",
+        "id": "stream-1785034721586-77cnw0",
+        "type": "smoothstep",
+        "label": "2",
+        "data": {
+          "label": "2",
+          "compositionInput": "fraction",
+          "totalFlow": "",
+          "composition": {
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354": {
+              "fraction": "",
+              "componentFlow": ""
+            },
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693": {
+              "fraction": "",
+              "componentFlow": ""
+            },
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15": {
+              "fraction": "",
+              "componentFlow": ""
+            }
+          },
+          "calculatedFields": [],
+          "remainingValue": null,
+          "validationMessage": "",
+          "color": "#002060",
+          "sourcePortPosition": {
+            "side": "top",
+            "offset": 51
+          },
+          "targetPortPosition": {
+            "side": "top",
+            "offset": 50
+          }
+        },
+        "style": {
+          "stroke": "#002060"
+        },
+        "markerEnd": {
+          "type": "arrowclosed",
+          "color": "#002060"
+        },
+        "selected": false
+      },
+      {
+        "source": "node-6",
+        "sourceHandle": "output-stream-1785034757866-tgmi7n",
+        "target": "node-8",
+        "targetHandle": "input",
+        "id": "stream-1785034757866-tgmi7n",
+        "type": "smoothstep",
+        "label": "4",
+        "data": {
+          "label": "4",
+          "compositionInput": "fraction",
+          "totalFlow": "",
+          "composition": {
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354": {
+              "fraction": "0",
+              "componentFlow": ""
+            },
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693": {
+              "fraction": "0",
+              "componentFlow": ""
+            },
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15": {
+              "fraction": "1",
+              "componentFlow": ""
+            }
+          },
+          "calculatedFields": [
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693"
+          ],
+          "remainingValue": null,
+          "validationMessage": "",
+          "color": "#c00000",
+          "sourcePortPosition": {
+            "side": "top",
+            "offset": 49
+          },
+          "targetPortPosition": null
+        },
+        "style": {
+          "stroke": "#c00000"
+        },
+        "markerEnd": {
+          "type": "arrowclosed",
+          "color": "#c00000"
+        },
+        "selected": false
+      },
+      {
+        "source": "node-6",
+        "sourceHandle": "output-stream-1785034774249-xnk2ac",
+        "target": "node-7",
+        "targetHandle": "input-stream-1785034774249-xnk2ac",
+        "id": "stream-1785034774249-xnk2ac",
+        "type": "smoothstep",
+        "label": "5",
+        "data": {
+          "label": "5",
+          "compositionInput": "componentFlow",
+          "totalFlow": "",
+          "composition": {
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354": {
+              "fraction": "",
+              "componentFlow": ""
+            },
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693": {
+              "fraction": "",
+              "componentFlow": ""
+            },
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15": {
+              "fraction": "",
+              "componentFlow": "0"
+            }
+          },
+          "calculatedFields": [],
+          "remainingValue": null,
+          "validationMessage": "",
+          "color": "#002060",
+          "sourcePortPosition": {
+            "side": "bottom",
+            "offset": 52
+          },
+          "targetPortPosition": {
+            "side": "left",
+            "offset": 50
+          }
+        },
+        "style": {
+          "stroke": "#002060"
+        },
+        "markerEnd": {
+          "type": "arrowclosed",
+          "color": "#002060"
+        },
+        "selected": false
+      },
+      {
+        "source": "node-7",
+        "sourceHandle": "output-stream-1785034785241-y20se9",
+        "target": "node-9",
+        "targetHandle": "input",
+        "id": "stream-1785034785241-y20se9",
+        "type": "smoothstep",
+        "label": "6",
+        "data": {
+          "label": "6",
+          "compositionInput": "fraction",
+          "totalFlow": "",
+          "composition": {
+            "component-12bc6d43-e2c3-4295-90c5-38af955d6354": {
+              "fraction": "0.01",
+              "componentFlow": ""
+            },
+            "component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693": {
+              "fraction": "0.99",
+              "componentFlow": ""
+            },
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15": {
+              "fraction": "0",
+              "componentFlow": ""
+            }
+          },
+          "calculatedFields": [
+            "component-8ede4a4a-7e14-4ca4-8abb-76d291855d15"
+          ],
+          "remainingValue": null,
+          "validationMessage": "",
+          "color": "#002060",
+          "sourcePortPosition": {
+            "side": "bottom",
+            "offset": 49
+          },
+          "targetPortPosition": null
+        },
+        "style": {
+          "stroke": "#002060"
+        },
+        "markerEnd": {
+          "type": "arrowclosed",
+          "color": "#002060"
+        },
+        "selected": false
+      }
+    ],
+    "equationNodes": [
+      {
+        "id": "variable-declaration-4de25586-66af-4da9-beef-971879a2074a",
+        "type": "variableDeclaration",
+        "position": {
+          "x": -87.07805010109314,
+          "y": 630.9775991123005
+        },
+        "style": {
+          "width": 300,
+          "height": 340
+        },
+        "data": {
+          "label": "xi",
+          "name": "Extent of reaction",
+          "symbol": "xi",
+          "unit": "kmol/h",
+          "status": "unknown",
+          "value": ""
+        },
+        "measured": {
+          "width": 280,
+          "height": 260
+        },
+        "selected": false,
+        "width": 280,
+        "height": 260,
+        "resizing": false
+      },
+      {
+        "id": "variable-declaration-b23e0eb2-f3a9-4797-890a-d0375dc6b1d2",
+        "type": "variableDeclaration",
+        "position": {
+          "x": 225.20542710406426,
+          "y": 630.627995059884
+        },
+        "style": {
+          "width": 300,
+          "height": 340
+        },
+        "data": {
+          "label": "Reactor conversion",
+          "name": "A conversion in the reactor",
+          "symbol": "X_A_R1",
+          "unit": "dimensionless",
+          "status": "unknown",
+          "value": ""
+        },
+        "measured": {
+          "width": 290,
+          "height": 260
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 290,
+        "height": 260,
+        "resizing": false
+      },
+      {
+        "id": "variable-declaration-9b2d5f68-248b-48c6-a7cb-4c8794216a8f",
+        "type": "variableDeclaration",
+        "position": {
+          "x": 542.251107348534,
+          "y": 631.421695566436
+        },
+        "style": {
+          "width": 300,
+          "height": 340
+        },
+        "data": {
+          "label": "Global conversion",
+          "name": "A conversion in the global system",
+          "symbol": "X_A_Global",
+          "unit": "dimensionless",
+          "status": "unknown",
+          "value": ""
+        },
+        "measured": {
+          "width": 294,
+          "height": 260
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 294,
+        "height": 260,
+        "resizing": false
+      },
+      {
+        "id": "target-function-1b183903-804c-4a6f-8cbf-a85b62200b7b",
+        "type": "targetFunction",
+        "position": {
+          "x": -85.79150643445999,
+          "y": 913.3501071056704
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "m_T_2 (Eq. 1)",
+          "targetId": "stream-1785034721586-77cnw0__totalFlow",
+          "expression": {
+            "operands": [
+              {
+                "type": "constant",
+                "value": "0.5"
+              },
+              {
+                "type": "variable",
+                "variableId": "stream-1785034702136-2anjc4__totalFlow"
+              }
+            ],
+            "operators": [
+              "*"
+            ],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [],
+            "hadPendingDependencies": false
+          }
+        },
+        "measured": {
+          "width": 380,
+          "height": 350
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 380,
+        "height": 350,
+        "resizing": false
+      },
+      {
+        "id": "target-function-988dde2a-fc09-4211-9c38-78ade5323caf",
+        "type": "targetFunction",
+        "position": {
+          "x": 330.9012595053699,
+          "y": 911.7627060925663
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "w_1_2 (Eq. 2)",
+          "targetId": "stream-1785034721586-77cnw0__fraction__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+          "expression": {
+            "operands": [
+              {
+                "type": "variable",
+                "variableId": "stream-1785034702136-2anjc4__fraction__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+              }
+            ],
+            "operators": [],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [],
+            "hadPendingDependencies": false
+          }
+        },
+        "measured": {
+          "width": 368,
+          "height": 350
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 368,
+        "height": 350,
+        "resizing": false
+      },
+      {
+        "id": "target-function-6a64e945-bbfb-4294-baaf-37596fe06c44",
+        "type": "targetFunction",
+        "position": {
+          "x": 723.4853559061819,
+          "y": 911.7627060925662
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "w_2_2 (Eq. 3)",
+          "targetId": "stream-1785034721586-77cnw0__fraction__component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693",
+          "expression": {
+            "operands": [
+              {
+                "type": "variable",
+                "variableId": "stream-1785034702136-2anjc4__fraction__component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693"
+              }
+            ],
+            "operators": [],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [],
+            "hadPendingDependencies": false
+          }
+        },
+        "measured": {
+          "width": 382,
+          "height": 350
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 382,
+        "height": 350,
+        "resizing": false
+      },
+      {
+        "id": "target-function-4406e8c1-759c-4d11-9763-a364f8f6d781",
+        "type": "targetFunction",
+        "position": {
+          "x": -88.5360222617145,
+          "y": 1286.9632178388729
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "X_A_R1 (Eq. 12)",
+          "targetId": "user__variable-declaration-b23e0eb2-f3a9-4797-890a-d0375dc6b1d2",
+          "expression": {
+            "operands": [
+              {
+                "type": "constant",
+                "value": "92"
+              },
+              {
+                "type": "variable",
+                "variableId": "user__variable-declaration-4de25586-66af-4da9-beef-971879a2074a"
+              },
+              {
+                "type": "group",
+                "expression": {
+                  "operands": [
+                    {
+                      "type": "variable",
+                      "variableId": "stream-1785034702136-2anjc4__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+                    },
+                    {
+                      "type": "variable",
+                      "variableId": "stream-1785034721586-77cnw0__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ],
+                  "pendingOperator": ""
+                }
+              }
+            ],
+            "operators": [
+              "*",
+              "/"
+            ],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [
+              {
+                "variableId": "user__variable-declaration-4de25586-66af-4da9-beef-971879a2074a",
+                "label": "Declared variable (xi)",
+                "relation": "Solved by Linear System (Eqs. 4-6, 9, 11)"
+              },
+              {
+                "variableId": "stream-1785034721586-77cnw0__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+                "label": "2 · A · Component mass flow (ṁ1)",
+                "relation": "w1 × ṁT"
+              }
+            ],
+            "hadPendingDependencies": true
+          }
+        },
+        "measured": {
+          "width": 665,
+          "height": 414
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 665,
+        "height": 414,
+        "resizing": false
+      },
+      {
+        "id": "target-function-7aef6a1e-0a19-44d1-a02e-02b65c1327de",
+        "type": "targetFunction",
+        "position": {
+          "x": 613.6134721313363,
+          "y": 1292.653785187423
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "X_A_Global (Eq. 13)",
+          "targetId": "user__variable-declaration-9b2d5f68-248b-48c6-a7cb-4c8794216a8f",
+          "expression": {
+            "operands": [
+              {
+                "type": "group",
+                "expression": {
+                  "operands": [
+                    {
+                      "type": "variable",
+                      "variableId": "stream-1785034702136-2anjc4__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+                    },
+                    {
+                      "type": "variable",
+                      "variableId": "stream-1785034785241-y20se9__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ],
+                  "pendingOperator": ""
+                }
+              },
+              {
+                "type": "variable",
+                "variableId": "stream-1785034702136-2anjc4__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+              }
+            ],
+            "operators": [
+              "/"
+            ],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [
+              {
+                "variableId": "stream-1785034785241-y20se9__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+                "label": "6 · A · Component mass flow (ṁ1)",
+                "relation": "w1 × ṁT"
+              }
+            ],
+            "hadPendingDependencies": true
+          }
+        },
+        "measured": {
+          "width": 613,
+          "height": 411
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 613,
+        "height": 411,
+        "resizing": false
+      },
+      {
+        "id": "linear-system-19ef0b2d-2471-4baa-9e81-1dff12ff04f6",
+        "type": "linearSystem",
+        "position": {
+          "x": -82.60490438816885,
+          "y": 1728.9401628571106
+        },
+        "style": {
+          "width": 430,
+          "height": 600
+        },
+        "data": {
+          "label": "Linear System (Eqs. 4-6, 9, 11)",
+          "size": 5,
+          "variableIds": [
+            "user__variable-declaration-4de25586-66af-4da9-beef-971879a2074a",
+            "stream-1785034705761-khuh6h__totalFlow",
+            "stream-1785034757866-tgmi7n__totalFlow",
+            "stream-1785034774249-xnk2ac__totalFlow",
+            "stream-1785034785241-y20se9__totalFlow"
+          ],
+          "matrix": [
+            [
+              "92",
+              "0",
+              "0",
+              "0",
+              "v_6_a_w1"
+            ],
+            [
+              "-18",
+              "0",
+              "0",
+              "0",
+              "v_6_w_w2"
+            ],
+            [
+              "0",
+              "0",
+              "1",
+              "0",
+              "1"
+            ],
+            [
+              "0",
+              "1",
+              "-1",
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "1",
+              "-1"
+            ]
+          ],
+          "constants": [
+            "v_1_a_m1",
+            "v_1_w_m2",
+            "v_1_mt",
+            "0",
+            "v_2_mt"
+          ],
+          "analysis": {
+            "engine": "JavaScript fallback",
+            "variableCount": 5,
+            "rankA": 5,
+            "rankAugmented": 5,
+            "classification": "unique",
+            "physicalErrors": [],
+            "residual": 8.038873388460929e-14,
+            "solved": true,
+            "dependenciesResolved": [
+              "2 · Total mass flow (ṁT) — Calculated by m_T_2 (Eq. 1)"
+            ]
+          },
+          "analysisStatus": "complete",
+          "analysisError": ""
+        },
+        "measured": {
+          "width": 1214,
+          "height": 734
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 1214,
+        "height": 734,
+        "resizing": false
+      },
+      {
+        "id": "target-function-c471d7e9-4bc9-48d6-9fc7-9cf53128578e",
+        "type": "targetFunction",
+        "position": {
+          "x": 1177.9446526699753,
+          "y": 1736.899039970658
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "m_1_5 (Eq. 10)",
+          "targetId": "stream-1785034774249-xnk2ac__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+          "expression": {
+            "operands": [
+              {
+                "type": "variable",
+                "variableId": "stream-1785034721586-77cnw0__totalFlow"
+              },
+              {
+                "type": "variable",
+                "variableId": "stream-1785034721586-77cnw0__fraction__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+              },
+              {
+                "type": "variable",
+                "variableId": "stream-1785034785241-y20se9__fraction__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+              },
+              {
+                "type": "variable",
+                "variableId": "stream-1785034785241-y20se9__totalFlow"
+              }
+            ],
+            "operators": [
+              "*",
+              "+",
+              "*"
+            ],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [
+              {
+                "variableId": "stream-1785034721586-77cnw0__totalFlow",
+                "label": "2 · Total mass flow (ṁT)",
+                "relation": "Calculated by m_T_2 (Eq. 1)"
+              },
+              {
+                "variableId": "stream-1785034721586-77cnw0__fraction__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+                "label": "2 · A · Mass fraction (w1)",
+                "relation": "Calculated by w_1_2 (Eq. 2)"
+              },
+              {
+                "variableId": "stream-1785034785241-y20se9__totalFlow",
+                "label": "6 · Total mass flow (ṁT)",
+                "relation": "Solved by Linear System (Eqs. 4-6, 9, 11)"
+              }
+            ],
+            "hadPendingDependencies": true
+          }
+        },
+        "measured": {
+          "width": 563,
+          "height": 399
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 563,
+        "height": 399,
+        "resizing": false
+      },
+      {
+        "id": "target-function-42e3dc18-b76b-44db-ab0e-f61aa9852ebc",
+        "type": "targetFunction",
+        "position": {
+          "x": 1179.2484682075162,
+          "y": 2167.8915748126974
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "m_2_3 (Eq. 8)",
+          "targetId": "stream-1785034705761-khuh6h__componentFlow__component-b001459b-5e6c-41e3-8e1f-9fbccb9e4693",
+          "expression": {
+            "operands": [
+              {
+                "type": "variable",
+                "variableId": "stream-1785034774249-xnk2ac__totalFlow"
+              },
+              {
+                "type": "variable",
+                "variableId": "stream-1785034774249-xnk2ac__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+              }
+            ],
+            "operators": [
+              "-"
+            ],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [
+              {
+                "variableId": "stream-1785034774249-xnk2ac__totalFlow",
+                "label": "5 · Total mass flow (ṁT)",
+                "relation": "Solved by Linear System (Eqs. 4-6, 9, 11)"
+              },
+              {
+                "variableId": "stream-1785034774249-xnk2ac__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+                "label": "5 · A · Component mass flow (ṁ1)",
+                "relation": "Calculated by m_1_5 (Eq. 10)"
+              }
+            ],
+            "hadPendingDependencies": true
+          }
+        },
+        "measured": {
+          "width": 567,
+          "height": 350
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 567,
+        "height": 350,
+        "resizing": false
+      },
+      {
+        "id": "target-function-864e475c-c8c8-4229-8838-929f1a546e6a",
+        "type": "targetFunction",
+        "position": {
+          "x": 1766.4072088492426,
+          "y": 1979.429056345138
+        },
+        "style": {
+          "width": 380,
+          "height": 460
+        },
+        "data": {
+          "label": "m_1_3 (Eq. 7)",
+          "targetId": "stream-1785034705761-khuh6h__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+          "expression": {
+            "operands": [
+              {
+                "type": "variable",
+                "variableId": "stream-1785034774249-xnk2ac__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354"
+              }
+            ],
+            "operators": [],
+            "pendingOperator": ""
+          },
+          "solveDiagnostics": {
+            "solved": true,
+            "dependenciesResolved": [
+              {
+                "variableId": "stream-1785034774249-xnk2ac__componentFlow__component-12bc6d43-e2c3-4295-90c5-38af955d6354",
+                "label": "5 · A · Component mass flow (ṁ1)",
+                "relation": "Calculated by m_1_5 (Eq. 10)"
+              }
+            ],
+            "hadPendingDependencies": true
+          }
+        },
+        "measured": {
+          "width": 570,
+          "height": 350
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 570,
+        "height": 350,
+        "resizing": false
+      }
+    ]
+  }
+}

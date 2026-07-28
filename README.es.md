@@ -89,7 +89,7 @@ Además de este ejemplo completo, se busca que el repositorio crezca como una bi
 
 Enlaces:
 
-- [Ejemplo resuelto con Archivos generados](examples/worked-example/)
+- [Ejemplo resuelto con Archivos generados](examples/worked-example.es.md/)
 - [Biblioteca de problemas resueltos](examples/)
 
 Esta documentación permitirá a los usuarios y evaluadores reproducir el flujo completo, desde la construcción del proceso hasta la obtención de resultados numéricos y la exportación de código.
@@ -287,21 +287,21 @@ ChemEFlow funciona así como un puente entre los fundamentos de ingeniería, la 
 - Incorporar tutoriales guiados y más ejemplos resueltos.
 - Mejorar las pruebas automatizadas y la accesibilidad.
 
-## Equipo
-
-**Mariola Camacho Lie (IMClick-Project)** — Creadora del proyecto, desarrollo del concepto de ingeniería química, diseño de la aplicación, pruebas, documentación e integración.
-
 ## Video de demostración
 
 El video final del proyecto presentará:
 
 - el problema abordado por ChemEFlow;
-- el objetivo de la aplicación;
+- el objetivo y características de la aplicación;
+- el proceso de desarrollo y el uso de Kiro;
 - sus componentes principales;
-- un ejemplo funcional completo;
-- el proceso de desarrollo y el uso de Kiro.
+- un ejemplo funcional completo (Ejemplo resuelto con Archivos generados).
 
 **Video:** _Agregar aquí el enlace final antes de la entrega._
+
+## Equipo
+
+**Mariola Camacho Lie (IMClick-Project)** — Creadora del proyecto, desarrollo del concepto de ingeniería química, diseño de la aplicación, pruebas, documentación e integración.
 
 ## Agradecimientos
 
