@@ -289,7 +289,7 @@ It should be noted that the material balances can be formulated using different 
 The degrees-of-freedom analysis shows that Equations (1)-(3) and the Overall System constitute the most convenient starting point because they have a solution due to their explicit expression or because a degree of freedom equal to zero is confirmed. In the flowsheet and degrees-of-freedom analysis, there are 11 unknowns $\xi, w_{1,2}, w_{2,2}, \dot m_{T,2}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,3}, \dot m_{T,4}, \dot m_{1,5}, \dot m_{T,5}, \dot m_{T,6}$, where Equations (1)-(11) establish this possible solution strategy: directly obtain the values of $w_{1,2}, w_{2,2}, \dot m_{T,2}$ using Equations (1)-(3), and these results complement the system of linear equations established by Equations (4)-(6), (9), and (11):
 
 $$
-\mathbf{A}\mathbf{x}=\mathbf{b}
+\mathbf{A}\mathbf{x}=\mathbf{b},
 $$
 
 $$
@@ -300,7 +300,7 @@ $$
 0 & 0 & 1 & 0 & 1 \\
 0 & 1 & -1 & -1 & 0 \\
 0 & 0 & 0 & 1 & -1
-\end{bmatrix}
+\end{bmatrix},
 $$
 
 $$
@@ -311,7 +311,7 @@ $$
 \dot m_{T,4} \\
 \dot m_{T,5} \\
 \dot m_{T,6}
-\end{bmatrix}
+\end{bmatrix},
 $$
 
 $$
@@ -322,7 +322,7 @@ $$
 \dot m_{T,1} \\
 0 \\
 \dot m_{T,2}
-\end{bmatrix}
+\end{bmatrix},
 $$
 
 and use those calculated values in Equations (10), (8), and (7). 

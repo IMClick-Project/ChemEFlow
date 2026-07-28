@@ -290,7 +290,7 @@ Cabe señalar que los balances de materia pueden formularse mediante diferentes 
 El análisis de grados de libertad muestra que las Ecuaciones (1)-(3) y el Sistema Global constituyen el punto de partida más conveniente, ya que tienen solución dada su expresión explícita o al comprobarse grados de libertad igual a cero. En el diagrama de flujo y análisis de grados de libertad hay 11 incógnitas $\xi, w_{1,2}, w_{2,2}, \dot m_{T,2}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,3}, \dot m_{T,4}, \dot m_{1,5}, \dot m_{T,5}, \dot m_{T,6}$, donde las Ecuaciones (1)-(11) establecen esta posible estrategia de solución: obtener directamente los valores de $w_{1,2}, w_{2,2}, \dot m_{T,2}$ con las Ecuaciones (1)-(3) y dichos resultados complementan el sistema de ecuaciones lineales que establecen las Ecuaciones (4)-(6), (9) y (11):
 
 $$
-\mathbf{A}\mathbf{x}=\mathbf{b}
+\mathbf{A}\mathbf{x}=\mathbf{b},
 $$
 
 $$
@@ -301,7 +301,7 @@ $$
 0 & 0 & 1 & 0 & 1 \\
 0 & 1 & -1 & -1 & 0 \\
 0 & 0 & 0 & 1 & -1
-\end{bmatrix}
+\end{bmatrix},
 $$
 
 $$
@@ -312,7 +312,7 @@ $$
 \dot m_{T,4} \\
 \dot m_{T,5} \\
 \dot m_{T,6}
-\end{bmatrix}
+\end{bmatrix},
 $$
 
 $$
@@ -323,7 +323,7 @@ $$
 \dot m_{T,1} \\
 0 \\
 \dot m_{T,2}
-\end{bmatrix}
+\end{bmatrix},
 $$
 
 y usar dichos valores calculados en las Ecuaciones (10), (8) y (7). 
