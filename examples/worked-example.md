@@ -94,7 +94,7 @@ Because the process operates continuously, at steady state, and with a chemical 
 
 $$
 \text{Input}+\text{Generation}-\text{Output}-\text{Consumption}
-=\cancel{\text{Accumulation}}.
+=\text{Accumulation}.
 $$
 
 Because the system is at steady state, accumulation is equal to zero. Therefore, for reactants:
@@ -141,20 +141,23 @@ The relationships between streams 1 and 2 are (the first part of the subscript c
 
 $$
 \dot m_{T,2}=0.5\dot m_{T,1},
-\tag{1}
 $$
+<p align="right"><strong>(1)</strong></p>
+
 $$
 w_{1,2}=w_{1,1},
-\tag{2}
 $$
+<p align="right"><strong>(2)</strong></p>
+
 $$
 w_{2,2}=w_{2,1}.
-\tag{3}
 $$
+<p align="right"><strong>(3)</strong></p>
+
 The degree of freedom of each subsystem is determined by:
 
 $$
-GL=\#\text{ Unknowns}-\#\text{ Independent Equations}.
+GL=N_{\text{Unknowns}}-N_{\text{Independent Equations}}.
 $$
 
 The equations formulated as balances have units of kg/h.
@@ -163,28 +166,28 @@ The equations formulated as balances have units of kg/h.
 
 For the overall balance, the recycle stream is internal and does not cross the system boundary. Therefore, only fresh stream 1 enters, while product stream 4 and the final water-rich stream 6 leave.
 
-The unknowns are $\left\{\dot m_{T,4},\dot m_{T,6},\xi\right\}$. Three independent balances can be formulated:
+The unknowns are $\dot m_{T,4},\dot m_{T,6},\xi$. Three independent balances can be formulated:
 
 **Ethanol balance:** $\dot m_{T,1}w_{1,1}=\dot m_{T,6}w_{1,6}+2PM_1\xi$ $\Rightarrow$ $(1000)(0.85)=\dot m_{T,6}(0.01)+2(46)\xi$ 
 
 $$
 \Rightarrow 850=0.01\dot m_{T,6}+92\xi.
-\tag{4}
 $$
+<p align="right"><strong>(4)</strong></p>
 
 **Water balance:** $\dot m_{T,1}w_{2,1}=\dot m_{T,6}w_{2,6}-PM_2\xi$ $\Rightarrow$ $(1000)(0.15)=\dot m_{T,6}(0.99)-18\xi$ 
 
 $$
 \Rightarrow 150=0.99\dot m_{T,6}-18\xi.
-\tag{5}
 $$
+<p align="right"><strong>(5)</strong></p>
 
 **Total balance:** $\dot m_{T,1}=\dot m_{T,6}+\dot m_{T,4}$  
 
 $$
 \Rightarrow 1000=\dot m_{T,6}+\dot m_{T,4}.
-\tag{6}
 $$
+<p align="right"><strong>(6)</strong></p>
 
 Therefore, $GL_{\text{Global}}=3-3=0$. The overall system is correctly specified and can be solved independently to determine its unknowns.
 
@@ -192,7 +195,7 @@ Therefore, $GL_{\text{Global}}=3-3=0$. The overall system is correctly specified
 
 Streams 1 and 2 enter the reactor, while stream 3 is its outlet.
 
-The unknowns are $\left\{\dot m_{T,2}, w_{1,2}, w_{2,2}, \dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \xi\right\}$. Three independent balances can be formulated:
+The unknowns are $\dot m_{T,2}, w_{1,2}, w_{2,2}, \dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \xi$. Three independent balances can be formulated:
 
 **Ethanol balance:** $\dot m_{T,1}w_{1,1} + \dot m_{T,2}w_{1,2}=\dot m_{1,3}+2PM_1\xi$ $\Rightarrow$ $(1000)(0.85) + m_{T,2}w_{1,2} = \dot m_{1,3}+2(46)\xi$ 
 
@@ -218,28 +221,28 @@ Therefore, $GL_{\text{R1}}=7-3=4$. The reactor cannot be solved independently be
 
 Stream 3 enters the first column, while stream 4, consisting of pure ethyl ether, and stream 5, containing ethanol and water, leave it.
 
-The unknowns are $\left\{m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,4}, \dot m_{T,5}, \dot m_{1,5}\right\}$. Three independent balances can be formulated:
+The unknowns are $\dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,4}, \dot m_{T,5}, \dot m_{1,5}$. Three independent balances can be formulated:
 
 **Ethanol balance:**
 
 $$
 \dot m_{1,3}=\dot m_{1,5}.
-\tag{7}
 $$
+<p align="right"><strong>(7)</strong></p>
 
 **Water balance:**
 
 $$
 \dot m_{2,3}=\dot m_{T,5}-\dot m_{1,5}.
-\tag{8}
 $$
+<p align="right"><strong>(8)</strong></p>
 
 **Total balance:** 
 
 $$
 \dot m_{T,3}=\dot m_{T,4}+\dot m_{T,5}.
-\tag{9}
 $$
+<p align="right"><strong>(9)</strong></p>
 
 Therefore, $GL_{\text{C1}}=6-3=3$. C1 cannot be solved independently because three of its unknowns must be known. For example, if $\dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}$ are determined in the reactor, C1 will have $GL=0$ and can be solved.
 
@@ -247,21 +250,21 @@ Therefore, $GL_{\text{C1}}=6-3=3$. C1 cannot be solved independently because thr
 
 Stream 5 enters the second column, while recycle stream 2 and the final water-rich stream 6 leave it.
 
-The unknowns are $\left\{\dot m_{T,5}, \dot m_{1,5}, \dot m_{T,2}, w_{1,2}, \dot m_{T,6}\right\}$. Two independent balances can be formulated:
+The unknowns are $\dot m_{T,5}, \dot m_{1,5}, \dot m_{T,2}, w_{1,2}, \dot m_{T,6}$. Two independent balances can be formulated:
 
 **Ethanol balance:** $\dot m_{1,5}=\dot m_{T,2}w_{1,2}+\dot m_{T,6}w_{1,6}$
 
 $$
 \Rightarrow \dot m_{1,5}=\dot m_{T,2}w_{1,2}+0.01\dot m_{T,6}.
-\tag{10}
 $$
+<p align="right"><strong>(10)</strong></p>
 
 **Total balance:** 
 
 $$
 \dot m_{T,5}=\dot m_{T,2}+\dot m_{T,6}.
-\tag{11}
 $$ 
+<p align="right"><strong>(11)</strong></p>
 
 Therefore, $GL_{\text{C2}}=5-2=3$. C2 cannot be solved independently because three of its unknowns must be known. For example, if $\dot m_{T,2}, w_{1,2}, \dot m_{T,6}$ are determined using Equations (1)-(3) and the overall system, C2 will have $GL=0$ and can be solved.
 
@@ -269,13 +272,13 @@ Likewise, the ethanol conversion (amount consumed/amount fed) in the reactor and
 
 $$
 X_{A,R1}=\dfrac{2PM_1\xi}{\dot m_{1,1}+\dot m_{1,2}} = \dfrac{92\xi}{\dot m_{1,1}+\dot m_{1,2}},
-\tag{12}
 $$
+<p align="right"><strong>(12)</strong></p>
 
 $$
 X_{A,Global}=\dfrac{\dot m_{1,1}-\dot m_{1,6}}{\dot m_{1,1}},
-\tag{13}
 $$
+<p align="right"><strong>(13)</strong></p>
 
 respectively.
 
@@ -283,7 +286,7 @@ It should be noted that the material balances can be formulated using different 
 
 #### Solution strategy
 
-The degrees-of-freedom analysis shows that Equations (1)-(3) and the Overall System constitute the most convenient starting point because they have a solution due to their explicit expression or because a degree of freedom equal to zero is confirmed. In the flowsheet and degrees-of-freedom analysis, there are 11 unknowns $\left\{\xi, w_{1,2}, w_{2,2}, \dot m_{T,2}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,3}, \dot m_{T,4}, \dot m_{1,5}, \dot m_{T,5}, \dot m_{T,6}\right\}$, where Equations (1)-(11) establish this possible solution strategy: directly obtain the values of $w_{1,2}, w_{2,2}, \dot m_{T,2}$ using Equations (1)-(3), and these results complement the system of linear equations established by Equations (4)-(6), (9), and (11):
+The degrees-of-freedom analysis shows that Equations (1)-(3) and the Overall System constitute the most convenient starting point because they have a solution due to their explicit expression or because a degree of freedom equal to zero is confirmed. In the flowsheet and degrees-of-freedom analysis, there are 11 unknowns $\xi, w_{1,2}, w_{2,2}, \dot m_{T,2}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,3}, \dot m_{T,4}, \dot m_{1,5}, \dot m_{T,5}, \dot m_{T,6}$, where Equations (1)-(11) establish this possible solution strategy: directly obtain the values of $w_{1,2}, w_{2,2}, \dot m_{T,2}$ using Equations (1)-(3), and these results complement the system of linear equations established by Equations (4)-(6), (9), and (11):
 
 $$
 \begin{bmatrix}
@@ -308,7 +311,6 @@ $$
 0\\
 \dot m_{T,2}
 \end{bmatrix},
-\tag{14}
 $$
 
 and use those calculated values in Equations (10), (8), and (7). 
@@ -363,15 +365,15 @@ Similarly, the "Results" tab contains buttons to export the calculations and res
 
 ![Results in csv file](images/worked-example/csv.png)
 
-**Figure 10. Results in csv file.**
+**Figure 14. Results in csv file.**
 
 ![Python code](images/worked-example/python.png)
 
-**Figure 10. Python code.**
+**Figure 15. Python code.**
 
 ![MATLAB code](images/worked-example/matlab.png)
 
-**Figure 10. MATLAB code.**
+**Figure 16. MATLAB code.**
 
 ## Conclusion
 

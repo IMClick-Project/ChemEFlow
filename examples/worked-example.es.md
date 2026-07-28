@@ -94,7 +94,7 @@ Como el proceso opera de manera continua, en estado estacionario y con una reacc
 
 $$
 \text{Entrada}+\text{Generación}-\text{Salida}-\text{Consumo}
-=\cancel{\text{Acumulación}}.
+=\text{Acumulación}.
 $$
 
 Debido al estado estacionario, la acumulación es igual a cero. Por tanto, para los reactivos:
@@ -141,20 +141,24 @@ Las relaciones existentes entre la corriente 1 y 2 son (primera parte del subín
 
 $$
 \dot m_{T,2}=0.5\dot m_{T,1},
-\tag{1}
 $$
+<p align="right"><strong>(1)</strong></p>
+
 $$
 w_{1,2}=w_{1,1},
-\tag{2}
 $$
+<p align="right"><strong>(2)</strong></p>
+
 $$
 w_{2,2}=w_{2,1}.
-\tag{3}
 $$
+
+<p align="right"><strong>(3)</strong></p>
+
 El grado de libertad de cada subsistema se determina mediante:
 
 $$
-GL=\#\text{ Incógnitas}-\#\text{ Ecuaciones Independientes}.
+GL=N_{\text{Incógnitas}}-N_{\text{Ecuaciones Independientes}}.
 $$
 
 Las ecuaciones planteadas como balances tendrán unidades de kg/h.
@@ -163,28 +167,28 @@ Las ecuaciones planteadas como balances tendrán unidades de kg/h.
 
 Para el balance global, la corriente de recirculación es interna y no cruza la frontera del sistema. Por tanto, únicamente entra la corriente fresca 1 y salen la corriente de producto 4 y la corriente final rica en agua 6.
 
-Las incógnitas son $\left\{\dot m_{T,4},\dot m_{T,6},\xi\right\}$. Se pueden formular tres balances independientes:
+Las incógnitas son $\dot m_{T,4},\dot m_{T,6},\xi$. Se pueden formular tres balances independientes:
 
 **Balance de etanol:** $\dot m_{T,1}w_{1,1}=\dot m_{T,6}w_{1,6}+2PM_1\xi$ $\Rightarrow$ $(1000)(0.85)=\dot m_{T,6}(0.01)+2(46)\xi$ 
 
 $$
 \Rightarrow 850=0.01\dot m_{T,6}+92\xi.
-\tag{4}
 $$
+<p align="right"><strong>(4)</strong></p>
 
 **Balance de agua:** $\dot m_{T,1}w_{2,1}=\dot m_{T,6}w_{2,6}-PM_2\xi$ $\Rightarrow$ $(1000)(0.15)=\dot m_{T,6}(0.99)-18\xi$ 
 
 $$
 \Rightarrow 150=0.99\dot m_{T,6}-18\xi.
-\tag{5}
 $$
+<p align="right"><strong>(5)</strong></p>
 
 **Balance de total:** $\dot m_{T,1}=\dot m_{T,6}+\dot m_{T,4}$  
 
 $$
 \Rightarrow 1000=\dot m_{T,6}+\dot m_{T,4}.
-\tag{6}
 $$
+<p align="right"><strong>(6)</strong></p>
 
 Por tanto, $GL_{\text{Global}}=3-3=0$. El sistema global está correctamente especificado y puede resolverse independientemente para determinar sus incógnitas.
 
@@ -192,7 +196,7 @@ Por tanto, $GL_{\text{Global}}=3-3=0$. El sistema global está correctamente esp
 
 Al reactor entran las corrientes 1 y 2, mientras que la corriente 3 constituye su salida.
 
-Las incógnitas son $\left\{\dot m_{T,2}, w_{1,2}, w_{2,2}, \dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \xi\right\}$. Se pueden formular tres balances independientes:
+Las incógnitas son $\dot m_{T,2}, w_{1,2}, w_{2,2}, \dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \xi$. Se pueden formular tres balances independientes:
 
 **Balance de etanol:** $\dot m_{T,1}w_{1,1} + \dot m_{T,2}w_{1,2}=\dot m_{1,3}+2PM_1\xi$ $\Rightarrow$ $(1000)(0.85) + m_{T,2}w_{1,2} = \dot m_{1,3}+2(46)\xi$ 
 
@@ -218,28 +222,28 @@ Por tanto, $GL_{\text{R1}}=7-3=4$. El reactor no puede resolverse de manera inde
 
 En la primera columna entra la corriente 3 y salen la corriente 4, formada por éter etílico puro, y la corriente 5, que contiene etanol y agua.
 
-Las incógnitas son $\left\{m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,4}, \dot m_{T,5}, \dot m_{1,5}\right\}$. Se pueden formular tres balances independientes:
+Las incógnitas son $\dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,4}, \dot m_{T,5}, \dot m_{1,5}$. Se pueden formular tres balances independientes:
 
 **Balance de etanol:**
 
 $$
 \dot m_{1,3}=\dot m_{1,5}.
-\tag{7}
 $$
+<p align="right"><strong>(7)</strong></p>
 
 **Balance de agua:**
 
 $$
 \dot m_{2,3}=\dot m_{T,5}-\dot m_{1,5}.
-\tag{8}
 $$
+<p align="right"><strong>(8)</strong></p>
 
 **Balance de total:** 
 
 $$
 \dot m_{T,3}=\dot m_{T,4}+\dot m_{T,5}.
-\tag{9}
 $$
+<p align="right"><strong>(9)</strong></p>
 
 Por tanto, $GL_{\text{C1}}=6-3=3$. C1 no puede resolverse de manera independiente porque requiere conocer tres de sus incógnitas. Por ejemplo, si se determinan $\dot m_{T,3}, \dot m_{1,3}, \dot m_{2,3}$ en el reactor, C1 tendrá $GL=0$ para poder resolverse.
 
@@ -247,21 +251,21 @@ Por tanto, $GL_{\text{C1}}=6-3=3$. C1 no puede resolverse de manera independient
 
 En la segunda columna entra la corriente 5 y salen la corriente de recirculación 2 y la corriente final rica en agua 6.
 
-Las incógnitas son $\left\{\dot m_{T,5}, \dot m_{1,5}, \dot m_{T,2}, w_{1,2}, \dot m_{T,6}\right\}$. Se pueden formular dos balances independientes:
+Las incógnitas son $\dot m_{T,5}, \dot m_{1,5}, \dot m_{T,2}, w_{1,2}, \dot m_{T,6}$. Se pueden formular dos balances independientes:
 
 **Balance de etanol:** $\dot m_{1,5}=\dot m_{T,2}w_{1,2}+\dot m_{T,6}w_{1,6}$
 
 $$
 \Rightarrow \dot m_{1,5}=\dot m_{T,2}w_{1,2}+0.01\dot m_{T,6}.
-\tag{10}
 $$
+<p align="right"><strong>(10)</strong></p>
 
 **Balance de total:** 
 
 $$
 \dot m_{T,5}=\dot m_{T,2}+\dot m_{T,6}.
-\tag{11}
 $$ 
+<p align="right"><strong>(11)</strong></p>
 
 Por tanto, $GL_{\text{C2}}=5-2=3$. C2 no puede resolverse de manera independiente porque requiere conocer tres de sus incógnitas. Por ejemplo, si se determinan $\dot m_{T,2}, w_{1,2}, \dot m_{T,6}$ con las Ecuaciones (1)-(3) y el sistema global, C2 tendrá $GL=0$ para poder resolverse.
 
@@ -269,13 +273,13 @@ Asimismo, la conversión de etanol (cantidad consumida/cantidad alimentada) en e
 
 $$
 X_{A,R1}=\dfrac{2PM_1\xi}{\dot m_{1,1}+\dot m_{1,2}} = \dfrac{92\xi}{\dot m_{1,1}+\dot m_{1,2}},
-\tag{12}
 $$
+<p align="right"><strong>(12)</strong></p>
 
 $$
 X_{A,Global}=\dfrac{\dot m_{1,1}-\dot m_{1,6}}{\dot m_{1,1}},
-\tag{13}
 $$
+<p align="right"><strong>(13)</strong></p>
 
 respectivamente.
 
@@ -283,7 +287,7 @@ Cabe señalar que los balances de materia pueden formularse mediante diferentes 
 
 #### Estrategia de solución
 
-El análisis de grados de libertad muestra que las Ecuaciones (1)-(3) y el Sistema Global constituyen el punto de partida más conveniente, ya que tienen solución dada su expresión explícita o al comprobarse grados de libertad igual a cero. En el diagrama de flujo y análisis de grados de libertad hay 11 incógnitas $\left\{\xi, w_{1,2}, w_{2,2}, \dot m_{T,2}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,3}, \dot m_{T,4}, \dot m_{1,5}, \dot m_{T,5}, \dot m_{T,6}\right\}$, donde las Ecuaciones (1)-(11) establecen esta posible estrategia de solución: obtener directamente los valores de $w_{1,2}, w_{2,2}, \dot m_{T,2}$ con las Ecuaciones (1)-(3) y dichos resultados complementan el sistema de ecuaciones lineales que establecen las Ecuaciones (4)-(6), (9) y (11):
+El análisis de grados de libertad muestra que las Ecuaciones (1)-(3) y el Sistema Global constituyen el punto de partida más conveniente, ya que tienen solución dada su expresión explícita o al comprobarse grados de libertad igual a cero. En el diagrama de flujo y análisis de grados de libertad hay 11 incógnitas $\xi, w_{1,2}, w_{2,2}, \dot m_{T,2}, \dot m_{1,3}, \dot m_{2,3}, \dot m_{T,3}, \dot m_{T,4}, \dot m_{1,5}, \dot m_{T,5}, \dot m_{T,6}$, donde las Ecuaciones (1)-(11) establecen esta posible estrategia de solución: obtener directamente los valores de $w_{1,2}, w_{2,2}, \dot m_{T,2}$ con las Ecuaciones (1)-(3) y dichos resultados complementan el sistema de ecuaciones lineales que establecen las Ecuaciones (4)-(6), (9) y (11):
 
 $$
 \begin{bmatrix}
@@ -308,7 +312,6 @@ $$
 0\\
 \dot m_{T,2}
 \end{bmatrix},
-\tag{14}
 $$
 
 y usar dichos valores calculados en las Ecuaciones (10), (8) y (7). 
